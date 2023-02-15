@@ -2,7 +2,7 @@ from sklearn.datasets import load_iris
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 from sklearn import tree
-
+from joblib import dump
 
 data = load_iris()
 
@@ -21,3 +21,5 @@ prediction = clf.predict(test_X)
 print(accuracy_score(test_y, prediction))
 
 print(data['target_names'][prediction])
+
+dump(clf,"DT.joblib")
