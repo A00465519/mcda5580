@@ -14,4 +14,4 @@ pe_w = st.slider('petal width (cm)', min_value=0, max_value=10)
 
 predict = clf.predict([[sp_l, sp_w, pe_l, pe_w]])
 
-st.write(LABELS[predict])
+st.write(LABELS[predict[0]])
